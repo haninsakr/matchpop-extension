@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Live Football Scores",
+  "version": "1.0.0",
+  "description": "متابعة نتائج المباريات الحية من الدوريات الكبرى",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://v3.football.api-sports.io/*"
+  ],
+  "action": {
+    "default_popup": "football_popup_html.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "football_background_js.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
