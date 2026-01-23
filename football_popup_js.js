@@ -202,7 +202,7 @@ async function initializeApp() {
     
     'afcon': { name: 'Africa Cup of Nations', nameAr: 'كأس أمم أفريقيا', country: 'Africa', countryAr: 'أفريقيا', id: 6, category: 'africa_cups' },
     'afcon_qualifications': { name: 'Africa Cup of Nations Qualification', nameAr: 'تصفيات كأس أمم أفريقيا', country: 'Africa', countryAr: 'أفريقيا', id: 1163, category: 'africa_cups' },
-    'caf_cl': { name: 'CAF Champions League', nameAr: 'دوري أبطال أفريقيا', country: 'Africa', countryAr: 'أفريقيا', id: 20, category: 'africa_cups' },
+    'caf_cl': { name: 'CAF Champions League', nameAr: 'دوري أبطال أفريقيا', country: 'Africa', countryAr: 'أفريقيا', id: 12, category: 'africa_cups' },
     'caf_cc': { name: 'CAF Confederation Cup', nameAr: 'كأس الكونفدرالية الأفريقية', country: 'Africa', countryAr: 'أفريقيا', id: 19, category: 'africa_cups' },
     
     'asian_cup': { name: 'Asian Cup', nameAr: 'كأس آسيا', country: 'Asia', countryAr: 'آسيا', id: 13, category: 'asia_cups' },
