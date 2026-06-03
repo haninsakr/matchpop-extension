@@ -10,7 +10,144 @@
       padding: 0;
       box-sizing: border-box;
     }
+    .support-btn{
+  display:inline-block;
+  padding:10px 16px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:bold;
+  font-size:13px;
+  color:white;
+  background:linear-gradient(135deg,#ff9800,#ff5722);
+  transition:.3s;
+  white-space:nowrap;
+}
 
+.support-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(255,87,34,0.4);
+}
+
+/* Support Modal */
+#supportModal {
+  display:none;
+  position:fixed;
+  top:0; left:0; right:0; bottom:0;
+  background:rgba(0,0,0,0.6);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+}
+
+#supportModal.open {
+  display:flex;
+}
+
+.support-modal-box {
+  background:#fff;
+  border-radius:16px;
+  padding:24px 20px;
+  width:340px;
+  max-width:90%;
+  text-align:center;
+  box-shadow:0 8px 32px rgba(0,0,0,0.3);
+  position:relative;
+  animation:popIn .25s ease;
+}
+
+@keyframes popIn {
+  from{transform:scale(0.85);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+body.dark-mode .support-modal-box {
+  background:#2a2a3e;
+  color:#e0e0e0;
+}
+
+.support-modal-close {
+  position:absolute;
+  top:10px; right:14px;
+  background:none;
+  border:none;
+  font-size:20px;
+  cursor:pointer;
+  color:#999;
+}
+
+.support-modal-close:hover { color:#333; }
+body.dark-mode .support-modal-close:hover { color:#fff; }
+
+.support-modal-title {
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:6px;
+  color:#ff5722;
+}
+
+.support-modal-sub {
+  font-size:13px;
+  color:#666;
+  margin-bottom:18px;
+}
+
+body.dark-mode .support-modal-sub { color:#aaa; }
+
+.support-instapay-id {
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  color:#fff;
+  padding:14px;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:bold;
+  letter-spacing:0.5px;
+  margin-bottom:14px;
+  user-select:all;
+}
+
+.support-link-box {
+  background:#f5f5f5;
+  border-radius:10px;
+  padding:10px 12px;
+  font-size:12px;
+  color:#555;
+  word-break:break-all;
+  margin-bottom:16px;
+  cursor:pointer;
+}
+
+body.dark-mode .support-link-box {
+  background:#1a1a2e;
+  color:#aaa;
+}
+
+.support-copy-btn {
+  width:100%;
+  padding:13px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(135deg,#ff9800,#ff5722);
+  color:#fff;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+  margin-bottom:8px;
+}
+
+.support-copy-btn:hover {
+  transform:translateY(-2px);
+  box-shadow:0 4px 14px rgba(255,87,34,0.4);
+}
+
+.support-copied-msg {
+  display:none;
+  color:#4CAF50;
+  font-size:13px;
+  font-weight:bold;
+  margin-top:4px;
+}
     :root {
       --bg-gradient-start: #667eea;
       --bg-gradient-end: #764ba2;
@@ -780,6 +917,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Login Screen -->
   <div id="loginScreen">
@@ -846,9 +984,14 @@
         </div>
       </div>
       
-      <button class="manage-btn" id="manageBtn">
-        ⚙️ Manage Favorite Leagues
-      </button>
+      <div style="display:flex;gap:8px;justify-content:center;margin-bottom:4px;">
+        <button class="manage-btn" id="manageBtn" style="margin:0;">
+          ⚙️ Manage Favorite Leagues
+        </button>
+        <button id="supportBtn" class="support-btn" style="width:auto;margin:0;padding:10px 16px;font-size:13px;">
+          <span id="supportBtnLabel">💻 Fund the Dev</span>
+        </button>
+      </div>
 
       <div class="favorites-container" id="favoritesContainer"></div>
       
@@ -863,6 +1006,26 @@
     <div class="matches-container" id="matchesContainer" style="display: none;"></div>
 
     <div class="last-update" id="lastUpdate"></div>
+  </div>
+
+  <!-- Support Modal -->
+  <div id="supportModal">
+    <div class="support-modal-box">
+      <button class="support-modal-close" id="supportModalClose">✕</button>
+      <div class="support-modal-title" id="supportModalTitle">💻 Fund the Dev</div>
+      <div class="support-modal-sub" id="supportModalSub">This extension runs on caffeine &amp; code. Push a commit to my wallet ☕</div>
+
+      <div class="support-instapay-id" id="instapayId">haninsakr@instapay</div>
+
+      <div class="support-link-box" id="instapayLink" title="Click to copy link">
+        🔗 https://ipn.eg/S/haninsakr/instapay/3lf3LS
+      </div>
+
+      <button class="support-copy-btn" id="supportCopyBtn">
+        <span id="supportCopyLabel">📋 Copy Link &amp; ID</span>
+      </button>
+      <div class="support-copied-msg" id="supportCopiedMsg">✅ Copied to clipboard!</div>
+    </div>
   </div>
 
   <script src="football_popup_js.js"></script>
