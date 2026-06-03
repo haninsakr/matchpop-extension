@@ -189,12 +189,12 @@ async function initializeApp() {
     'tunisia_league': { name: 'Ligue Professionnelle 1', nameAr: 'الرابطة التونسية المحترفة', country: 'Tunisia', countryAr: 'تونس', id: 202, category: 'arab_leagues' },
     'algeria_league': { name: 'Ligue 1', nameAr: 'الدوري الجزائري', country: 'Algeria', countryAr: 'الجزائر', id: 203, category: 'arab_leagues' },
     
-    'egypt_cup': { name: 'Egypt Cup', nameAr: 'كأس مصر', country: 'Egypt', countryAr: 'مصر', id: 235, category: 'local_cups' },
+    'egypt_cup': { name: 'Egypt Cup', nameAr: 'كأس مصر', country: 'Egypt', countryAr: 'مصر', id: 714, category: 'local_cups' },
     'egypt_league_cup': { name: 'Egypt League Cup', nameAr: 'كأس الرابطة المصرية', country: 'Egypt', countryAr: 'مصر', id: 1064, category: 'local_cups' },
     'egypt_super': { name: 'Egypt Super Cup', nameAr: 'السوبر المصري', country: 'Egypt', countryAr: 'مصر', id: 234, category: 'local_cups' },
     
     'ucl': { name: 'Champions League', nameAr: 'دوري أبطال أوروبا', country: 'Europe', countryAr: 'أوروبا', id: 2, category: 'europe_cups' },
-    'uel': { name: 'Europa League', nameAr: 'الدوري الأوروبي', country: 'Europe', countryAr: 'أوروبا', id: 3, category: 'europe_cups' },
+    'uel': { name: 'Europa League', nameAr: 'الدوري الأوروبي', country: 'Europe', countryAr: 'أوروبا', id:3, category: 'europe_cups' },
     'uecl': { name: 'Conference League', nameAr: 'دوري المؤتمر الأوروبي', country: 'Europe', countryAr: 'أوروبا', id: 848, category: 'europe_cups' },
     'fa_cup': { name: 'FA Cup', nameAr: 'كأس الاتحاد الإنجليزي', country: 'England', countryAr: 'إنجلترا', id: 45, category: 'europe_cups' },
     'copa_del_rey': { name: 'Copa del Rey', nameAr: 'كأس ملك إسبانيا', country: 'Spain', countryAr: 'إسبانيا', id: 143, category: 'europe_cups' },
@@ -203,16 +203,32 @@ async function initializeApp() {
     'afcon': { name: 'Africa Cup of Nations', nameAr: 'كأس أمم أفريقيا', country: 'Africa', countryAr: 'أفريقيا', id: 6, category: 'africa_cups' },
     'afcon_qualifications': { name: 'Africa Cup of Nations Qualification', nameAr: 'تصفيات كأس أمم أفريقيا', country: 'Africa', countryAr: 'أفريقيا', id: 1163, category: 'africa_cups' },
     'caf_cl': { name: 'CAF Champions League', nameAr: 'دوري أبطال أفريقيا', country: 'Africa', countryAr: 'أفريقيا', id: 12, category: 'africa_cups' },
-    'caf_cc': { name: 'CAF Confederation Cup', nameAr: 'كأس الكونفدرالية الأفريقية', country: 'Africa', countryAr: 'أفريقيا', id: 19, category: 'africa_cups' },
+    'caf_cc': { name: 'CAF Confederation Cup', nameAr: 'كأس الكونفدرالية الأفريقية', country: 'Africa', countryAr: 'أفريقيا', id: 20, category: 'africa_cups' },
     
     'asian_cup': { name: 'Asian Cup', nameAr: 'كأس آسيا', country: 'Asia', countryAr: 'آسيا', id: 13, category: 'asia_cups' },
     'acl': { name: 'AFC Champions League', nameAr: 'دوري أبطال آسيا', country: 'Asia', countryAr: 'آسيا', id: 480, category: 'asia_cups' },
-    
-    'world_cup': { name: 'World Cup', nameAr: 'كأس العالم', country: 'World', countryAr: 'العالم', id: 1, category: 'world_cups' },
-    'club_wc': { name: 'Club World Cup', nameAr: 'كأس العالم للأندية', country: 'World', countryAr: 'العالم', id: 15, category: 'world_cups' },
-    'euro': { name: 'Euro', nameAr: 'كأس أوروبا', country: 'Europe', countryAr: 'أوروبا', id: 4, category: 'world_cups' },
-    'copa_america': { name: 'Copa America', nameAr: 'كوبا أمريكا', country: 'South America', countryAr: 'أمريكا الجنوبية', id: 9, category: 'world_cups' }
-  };
+    'world_cup': {name: 'World Cup',nameAr: 'كأس العالم',country: 'World',countryAr: 'العالم',id: 1,category: 'world_cup_favorites'},
+    'friendlies': {name: 'Friendlies',nameAr: 'المباريات الودية',country: 'World',countryAr: 'العالم',id: 10,category: 'world_cup_favorites'},
+    'nations_league': {name: 'UEFA Nations League',nameAr: 'دوري الأمم الأوروبية',country: 'World',countryAr: 'العالم',id: 5,category: 'world_cups'},
+    'club_wc': {name: 'Club World Cup',nameAr: 'كأس العالم للأندية',country: 'World',countryAr: 'العالم',id: 15,category: 'world_cup_favorites'},
+
+'euro': {
+  name: 'Euro',
+  nameAr: 'كأس أوروبا',
+  country: 'Europe',
+  countryAr: 'أوروبا',
+  id: 4,
+  category: 'world_cups'
+},
+
+'copa_america': {
+  name: 'Copa America',
+  nameAr: 'كوبا أمريكا',
+  country: 'South America',
+  countryAr: 'أمريكا الجنوبية',
+  id: 9,
+  category: 'world_cups'
+} };
 
   const CATEGORIES = {
     'europe_leagues': { en: '⚽ European Leagues', ar: '⚽ الدوريات الأوروبية' },
@@ -221,7 +237,8 @@ async function initializeApp() {
     'europe_cups': { en: '🏆 European Cups', ar: '🏆 البطولات الأوروبية' },
     'africa_cups': { en: '🌍 African Cups', ar: '🌍 البطولات الأفريقية' },
     'asia_cups': { en: '🌏 Asian Cups', ar: '🌏 البطولات الآسيوية' },
-    'world_cups': { en: '🌎 International Cups', ar: '🌎 البطولات الدولية' }
+    'world_cups': {en: '🌎 International Cups',ar: '🌎 البطولات الدولية'},
+    'world_cup_favorites': {en: '🏆 World Cup 2026',ar: '🏆 كأس العالم 2026'}
   };
 
   const MATCH_STATUS = {
@@ -312,7 +329,7 @@ async function initializeApp() {
       if (result.favoriteLeagues && result.favoriteLeagues.length > 0) {
         favoriteLeagues = result.favoriteLeagues;
       } else {
-        favoriteLeagues = ['premier_league', 'la_liga', 'serie_a', 'ucl', 'afcon', 'egypt_league'];
+        favoriteLeagues = [ 'world_cup','friendlies','nations_league','euro','copa_america','premier_league','la_liga','ucl','egypt_league'];
         await saveFavorites();
       }
     } catch (error) {
@@ -948,7 +965,142 @@ async function initializeApp() {
   createStatusFilters();
   await fetchMatches();
 }
+// ===============
+// Support Button — Modal with copy + bilingual
+// ===============
+document.addEventListener('DOMContentLoaded', () => {
+  const supportBtn        = document.getElementById('supportBtn');
+  const supportBtnLabel   = document.getElementById('supportBtnLabel');
+  const supportModal      = document.getElementById('supportModal');
+  const supportModalClose = document.getElementById('supportModalClose');
+  const supportCopyBtn    = document.getElementById('supportCopyBtn');
+  const supportCopyLabel  = document.getElementById('supportCopyLabel');
+  const supportCopiedMsg  = document.getElementById('supportCopiedMsg');
+  const supportModalTitle = document.getElementById('supportModalTitle');
+  const supportModalSub   = document.getElementById('supportModalSub');
 
+  const INSTAPAY_ID   = 'haninsakr@instapay';
+  const INSTAPAY_LINK = 'https://ipn.eg/S/haninsakr/instapay/3lf3LS';
+
+  const SUPPORT_TEXT = {
+    en: {
+      btn:     '💻 Fund the Dev',
+      title:   '💻 Fund the Dev',
+      sub:     'This extension runs on caffeine & code. Push a commit to my wallet ☕',
+      copy:    '📋 Copy Link & ID',
+      copied:  '✅ Copied to clipboard!',
+      idCopied:'✅ Copied!',
+      linkCopied:'✅ Link copied!'
+    },
+    ar: {
+      btn:     '💻 ادعم المطوّر',
+      title:   '💻 ادعم المطوّر',
+      sub:     'الإكستنشن ده اتبنى بالكود والقهوة — ابعت كوميت لمحفظتي ☕',
+      copy:    '📋 انسخ الرابط والـ ID',
+      copied:  '✅ تم النسخ!',
+      idCopied:'✅ تم النسخ!',
+      linkCopied:'✅ تم نسخ الرابط!'
+    }
+  };
+
+  // Detect current language from html dir attribute or localStorage
+  function getLang() {
+    const dir = document.documentElement.getAttribute('dir');
+    if (dir === 'rtl') return 'ar';
+    try {
+      return localStorage.getItem('lang') || 'en';
+    } catch(e) { return 'en'; }
+  }
+
+  function updateSupportLang() {
+    const lang = getLang();
+    const t = SUPPORT_TEXT[lang] || SUPPORT_TEXT.en;
+    if (supportBtnLabel)   supportBtnLabel.textContent  = t.btn;
+    if (supportModalTitle) supportModalTitle.textContent = t.title;
+    if (supportModalSub)   supportModalSub.textContent   = t.sub;
+    if (supportCopyLabel)  supportCopyLabel.innerHTML    = t.copy;
+    if (supportCopiedMsg)  supportCopiedMsg.textContent  = t.copied;
+  }
+
+  // Update lang whenever modal opens (picks up any lang switch)
+  function openSupportModal() {
+    updateSupportLang();
+    if (supportModal) supportModal.classList.add('open');
+  }
+
+  function closeSupportModal() {
+    if (supportModal) supportModal.classList.remove('open');
+    if (supportCopiedMsg) supportCopiedMsg.style.display = 'none';
+  }
+
+  if (supportBtn)         supportBtn.addEventListener('click', openSupportModal);
+  if (supportModalClose)  supportModalClose.addEventListener('click', closeSupportModal);
+
+  // Close on backdrop click
+  if (supportModal) {
+    supportModal.addEventListener('click', (e) => {
+      if (e.target === supportModal) closeSupportModal();
+    });
+  }
+
+  // Copy link + ID
+  if (supportCopyBtn) {
+    supportCopyBtn.addEventListener('click', async () => {
+      const lang = getLang();
+      const t = SUPPORT_TEXT[lang] || SUPPORT_TEXT.en;
+      const textToCopy = `${INSTAPAY_ID}\n${INSTAPAY_LINK}`;
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+      } catch (e) {
+        const ta = document.createElement('textarea');
+        ta.value = textToCopy;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      if (supportCopiedMsg) {
+        supportCopiedMsg.textContent = t.copied;
+        supportCopiedMsg.style.display = 'block';
+        setTimeout(() => { supportCopiedMsg.style.display = 'none'; }, 3000);
+      }
+    });
+  }
+
+  // Click instapay ID box to copy just the ID
+  const instapayIdEl   = document.getElementById('instapayId');
+  const instapayLinkEl = document.getElementById('instapayLink');
+
+  if (instapayIdEl) {
+    instapayIdEl.style.cursor = 'pointer';
+    instapayIdEl.title = 'Click to copy';
+    instapayIdEl.addEventListener('click', async () => {
+      const lang = getLang();
+      const t = SUPPORT_TEXT[lang] || SUPPORT_TEXT.en;
+      try { await navigator.clipboard.writeText(INSTAPAY_ID); } catch(e) {}
+      instapayIdEl.textContent = t.idCopied;
+      setTimeout(() => { instapayIdEl.textContent = INSTAPAY_ID; }, 2000);
+    });
+  }
+
+  if (instapayLinkEl) {
+    instapayLinkEl.addEventListener('click', async () => {
+      const lang = getLang();
+      const t = SUPPORT_TEXT[lang] || SUPPORT_TEXT.en;
+      try { await navigator.clipboard.writeText(INSTAPAY_LINK); } catch(e) {}
+      const orig = instapayLinkEl.textContent;
+      instapayLinkEl.textContent = t.linkCopied;
+      setTimeout(() => { instapayLinkEl.textContent = orig; }, 2000);
+    });
+  }
+
+  // Keep button label in sync if lang is toggled while popup is open
+  const observer = new MutationObserver(() => updateSupportLang());
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['dir'] });
+
+  // Initial render
+  updateSupportLang();
+});
 window.addEventListener('unload', () => {
   if (autoRefreshInterval) clearInterval(autoRefreshInterval);
 });
